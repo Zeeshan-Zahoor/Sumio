@@ -1,0 +1,232 @@
+.modal-content-pad {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: min(100dvw, 820px);
+    height: 100dvh;
+    background-color: var(--bg-main);
+    z-index: 2;
+
+}
+.modal-expense-name {
+    text-align: start;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#modal-expense-name {
+    color: var(--text-primary);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.4rem
+}
+
+#modal-expense-name:focus {
+    outline: none;
+    border: none;
+}
+
+.allocations {  
+    margin-top: 0.5%;
+    width: 97%;
+    /* background-color: #010028; */
+
+    background: linear-gradient(180deg, var(--bg-elevated-inverted), var(--bg-surface));
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+#details-box{
+    margin-top: 5px;
+    height: 92%;
+    overflow-y: auto;
+    width: 97%;
+    background-color: var(--bg-elevated-inverted);
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
+    padding: 1% 1% 1% 1%;
+    text-align: left;
+    scrollbar-width: thin;          /* Firefox */
+    -ms-overflow-style: thin;   
+
+}
+
+#detials-box::-webkit-scrollbar {
+  width: thin;
+}
+
+.add-from-partition {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.3rem ;
+    padding-right: 0.6rem;
+    margin-bottom: 0.3rem;
+    background: #00AA00;
+    box-shadow: var(--shadow-soft-I);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    corner-shape: squircle;
+    border-radius: 17px;
+    font-size: 11px;
+    transition: transform 0.2s ease-in;
+}
+
+.add-from-partition button:active {
+    scale: none;
+}
+.add-from-partition:active {
+    transform: scale(0.96);
+}
+
+.add-sub-detail-btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    background-color: var(--bg-modal-btns-save);
+    box-shadow: var(--shadow-soft-I);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10dvh;
+    right: 5dvw;
+}
+
+
+.add-sub-detail-btn:active {
+    scale: 0.9;
+    transition: ease 0.1s;
+}
+
+.add-sub-detail-btn-plus {
+    fill: var(--text-primary-inverted);
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.2rem
+}
+.box {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 100%;
+    padding: 2px;
+    text-align: center;
+}
+.label {
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.headings span{
+    font-size: medium;
+    font-weight: 600;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    
+}
+.headings {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.sub-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clear-detail-btn {
+    margin: 1px;
+    width: 23px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(255 64 0 / 0%);
+    color: #ffffff;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-detail-btn:hover {
+    background-color: rgba(185, 37, 7, 0);
+}
+.clear-detail-btn:active {
+    scale: 0.8;
+    transition: ease 0.2s;
+    filter: invert(0.5) invert(0.3);
+}
+.spend-btn {
+    margin:0;
+    margin-top: 5px;
+    width: 50px;
+    height: 25px;
+    font-size: 11px;
+    background-color: rgb(209, 101, 0);
+    padding: 0;
+}
+.spend-btn:hover {
+    background-color: rgb(102, 85, 0);
+}
+.credit-btn {
+    margin:0;
+    margin-top: 5px;
+    width: 50px;
+    height: 25px;
+    font-size: 11px;
+    background-color: rgb(0, 170, 0);
+    padding: 0;
+}
+.credit-btn:hover {
+    background-color: rgb(0, 102, 0);
+}
+
+#close-modal-btn:active {
+    background-color: rgba(10, 3, 66, 0.633);
+    scale: 0.8;
+    transition: ease 0.2s;
+}
+
+#close-modal-btn {
+    background-color: var(--bg-surface-section);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-soft);
+    
+    width: 6rem;
+    border-radius: 9px;
+    margin: 10px;
+    font-size: small;
+}

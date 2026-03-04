@@ -1,0 +1,103 @@
+:root[data-theme="ivory"] {
+  /* Backgrounds */
+  --bg-main: #fbefd5;                 /* app background */
+  --bg-surface: #fbefd5;              /* sections */
+  --bg-card: #fff1d9;                 /* cards */
+  --bg-elevated: #fffae0cc;           /* elevated surfaces */
+  --bg-elevated-inverted: #fff4dd;
+  --bg-elevated-section: #ffecc2;
+  --bg-surface-section: #fff0bfed;
+  --bg-modal: #fbf9f5;
+
+  /* #ffecc2, #fff0bfed  */
+
+  --bg-menu-btns: #ffefd1;
+  --bg-modal-btns-save: #bb8d2d;       /* gold */
+  --bg-modal-btns-cancel: #e0dbd37b;
+
+  --bg-sub-detail: #efe8dc;
+
+  /* Text */
+  --text-primary: #504e4e;
+  --text-primary-inverted: #fcf5d9;
+
+  --text-secondary: #5b5b5b;
+  --text-muted: #7a7a7a;
+  --text-muted-I: #00000029;
+
+  /* Accent Colors */
+  --accent-primary: #d6b36a;           /* soft gold */
+  --accent-secondary: #3a3a3a;
+  --accent-danger: #d65a5a;
+
+  /* Icons / Fills */
+  --folder-fill: #c9a457;
+  --folder-fill-dark: #67501fc2;
+  --folder-fill-I: #9e751f;
+  /* Borders & Shadows */
+  --border-soft: rgba(65, 65, 65, 0.167);
+  --border-input: rgba(0, 0, 0, 0.18);
+
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-soft-I: 0 2px 6px rgba(0, 0, 0, 0.18);
+
+  --outline-I: rgba(0, 0, 0, 0.25);
+
+  --individual-detail-focus: var(--text-muted-I);
+
+  /* Radius*/
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+
+  /* Links*/
+  --link-color: #8a6f3e;
+
+  --slider-hover: #d1be3e
+}
+#icon {
+  filter: invert(25%);
+}
+.partition-card {
+      box-shadow: 0px 0px 9px 0px #0000001a;
+      border: 1px solid var(--border-soft);  
+}
+.partition-details {
+    background: #fff6e0;
+    box-shadow: 0px 9px 12px #00000021;
+}
+.expense-card {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 22%);
+  border: 1px solid var(--border-soft);
+}
+.add-expense-btn {
+  fill: var(--folder-fill-I);
+}
+.partition-container .partition-card .partition-card-btns .delete-btn {
+  fill: var(--folder-fill-dark);
+}
+.allocations {
+  background: #4d3c00;
+}
+#modal-expense-name {
+  color: var(--text-primary-inverted);
+}
+.progress-text, .label {
+  color: var(--text-primary-inverted);
+}
+#close-modal-btn {
+  background: #997e25ed;
+  color: var(--text-primary-inverted);
+}
+.sub-details {
+  background-color: #ffeabbd6;
+}
+.clear-detail-btn {
+  filter: invert(1);
+}
+.progress-ring__background {
+    stroke: var(--folder-fill-dark);
+}
+.btn-reset {
+  color: var(--text-primary-inverted);
+}

@@ -1,0 +1,111 @@
+.partition-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 96%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+}
+
+.partition-title:focus {
+    outline: none;
+    border: none;
+}
+
+.partition-container {
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.partition-container::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari */
+}
+
+
+.partition-container .partition-card .partition-card-btns .delete-btn {
+    margin-right: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotateY(180deg);
+    cursor: pointer;
+    border-radius: 25px;
+    fill: var(--text-muted-I);
+}
+
+.partition-container .partition-card .partition-card-btns .delete-btn:active {
+    transform: scale(1.2);
+}
+
+.add-expense-btn {
+    transition: transform 0.1s ease-in;
+}
+
+.add-expense-btn:active {
+    transform: scale(1.1);
+}
+
+.partition-card .partition-card-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.partition-details {
+    background: linear-gradient(90deg, var(--bg-surface), var(--bg-elevated), var(--bg-surface));;
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+}
+
+.partition-details-inner h4 {
+    color: var(--text-primary);
+}
+
+.partition-details-inner h5 {
+    color: var(--text-muted);
+}
+
+.partition-details-inner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5px 15px 5px 15px;
+
+}
+.partition-add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+    140deg,
+    var(--bg-elevated-section),
+    var(--bg-surface-section));
+    height: 35px;
+    box-shadow: var(--shadow-soft-I);
+    /* border-radius: var(--radius-md); */
+    border-radius: 15px;
+    corner-shape: squircle;
+    border: 1px solid var(--border-soft);
+}
+.partition-add-btn:active {
+    scale: 0.96;
+    transition: 0.2s ease-in-out;
+}
+
+.add-partition-btn {
+    margin-left: 4px;
+}
+
+#add-section-icon {
+    stroke: var(--text-muted);
+}

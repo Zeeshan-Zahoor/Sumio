@@ -1,0 +1,130 @@
+
+.edit-amount-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 70%;
+    max-width: 340px;
+    padding: 20px 5px;
+    background-color: var(--bg-modal);
+    border-radius: 12px;
+    position: relative;
+    z-index: 1001;
+    box-shadow: var(--shadow-soft-I);
+
+}
+
+#entered-amount {
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    color: var(--text-primary);
+    font-weight: 600;
+    width: 90%;
+    height: 35px;
+    max-width: 100%;
+    background-color: transparent;
+    border-radius: 12px;
+    
+}
+
+.edit-amount-window-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+}
+
+.enter-btn, .cancel-btn {
+    flex: 1;
+    font-size: 0.9rem;
+    height: 2rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-modal-btns-save);
+    box-shadow: var(--shadow-soft-I);
+    color: var(--text-primary-inverted);
+    font-weight: bold;
+}
+.cancel-btn {
+    background-color: var(--bg-modal-btns-cancel);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.cancel-btn:active {
+    background-color: rgba(176, 176, 176, 0.415);
+}
+
+.enter-btn:active, .cancel-btn:active {
+    scale: 0.8;
+    transition: ease 0.2s;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    margin: 5px;
+    width: 45%;
+    height: 2rem;
+    font-size: 13px;
+}
+
+.edit-amount-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000073;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount-actions {
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.add-amount-icon {
+    transition: transform 0.2s ease;
+    fill: var(--text-muted);
+}
+
+.add-amount-icon:active {
+    transform: scale(0.9);
+}

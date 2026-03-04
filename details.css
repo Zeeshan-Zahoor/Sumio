@@ -1,0 +1,143 @@
+.sub-details {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1%;
+}
+
+.sub-detail-name {
+    width: 100%;
+    text-align: center;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.sub-detail-list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-muted-I);
+    border-radius: 100%;
+}
+
+.cross {
+    border-radius: 100%;
+    margin: -8px;
+    fill: var(--text-muted-I);
+}
+
+.sub-detail-total {
+    margin-top: 7px;
+}
+
+.individual-detail {
+    width: 100%;
+    height: fit-content;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.individual-detail:focus {
+    transition: 0.2s ease-in;
+    background-color: var(--individual-detail-focus);
+}
+.individual-credit-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #00AA00;
+    border-radius: 20px;
+    corner-shape: squircle;
+    padding: 3px;
+    transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+}
+.individual-credit-detail.delete {
+    transform: scale(0.6);
+    opacity: 0;
+}
+
+.clear-credit-detail-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear-credit-detail-btn svg {
+    fill: var(--bg-modal-btns-cancel);
+}
+
+.spend-detail-span {
+    font-size: 12px;
+    text-align: start;
+}
+
+.remark-parentheses-open {
+    margin-left: 4px;
+    padding: 0 1px;
+}
+.remark-parentheses-close {
+    padding: 0 1px;
+}
+.remark-span {
+    /* padding: 0 2px 2px 2px;
+    margin: 2px; */
+    transition: transform 0.12s ease-in, margin 0.12s ease-in;
+}
+.remark-span:focus {
+    outline: 1px solid var(--text-muted);
+    border-radius: 3px;
+    margin: 3px;
+    padding: 0 3px;
+}
+.amount-span {
+    transition: transform 0.12s ease-in, margin 0.12s ease-in;
+}
+.amount-span:focus {
+    outline: 1px solid var(--text-muted);
+    border-radius: 3px;
+    transform: scale(1.23);
+    margin: 3px;
+    padding: 0 3px;
+}
+
+.spend-detail-span-box {
+    max-width: calc(100% - 25px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.credit-detail-span {
+    color: white;
+    text-align: start;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin: 8px;
+}
+
+.sub-detail-title:focus {
+    outline: none;
+    border: none;
+}
+
+#modal-expense-name:focus {
+    outline: none;
+    border: none;
+}
