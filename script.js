@@ -598,6 +598,25 @@ const deleteExpense = (partitionIndex, expenseIndex) => {
 };
 
 // Expense details (open modal when expense clicked)
+const expenseTitle = document.getElementById("modal-expense-name");
+
+expenseTitle.addEventListener("blur", () => {
+    if (!updateExpenseTitle()) return;
+    showToast("Edited expense name", "info");
+}, true);
+
+expenseTitle.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+
+    e.preventDefault();
+
+    if (updateExpenseTitle()) {
+        showToast("Edited expense name", "info");
+    }
+
+    e.target.blur();
+});
+
 const openExpense = (expenseName, partitionIndex, expenseIndex) => {
     console.log(`Card clicked: ${expenseName} in partition ${partitionIndex} expenseIndex ${expenseIndex}`);
 
@@ -611,26 +630,7 @@ const openExpense = (expenseName, partitionIndex, expenseIndex) => {
 
     if (!expenseDetails_Model) return;
     expenseDetails_Model.classList.remove("hide");
-    document.getElementById("modal-expense-name").innerText = `${expenseName}`;
-
-    //make the name editable
-    document.getElementById("modal-expense-name").addEventListener("blur", () => {
-        if(!updateExpenseTitle(expenseIndex)) return;
-        showToast("Edited expense name", "info");
-    }, true)
-    document.getElementById("modal-expense-name").addEventListener("keydown", (e) => {
-        if (e.key == "Enter") {
-            e.preventDefault();
-            if(!updateExpenseTitle(expenseIndex))  {
-                e.target.blur();
-                return;
-            }
-            showToast("Edited expense name", "info");
-            e.target.blur();
-        }
-    }, true)
-
-    expenseDetails_Model.classList.remove("hide");
+    expenseTitle.innerText = `${expenseName}`;
 
     expenseDetails_Model.style.transition = "transform 0.2s ease";
     expenseDetails_Model.style.transform = "translate(350%, -50%)";
@@ -648,14 +648,20 @@ const openExpense = (expenseName, partitionIndex, expenseIndex) => {
 
 };
 
-function updateExpenseTitle(expenseIndex) {
-    const newName = document.getElementById("modal-expense-name").innerText.trim();
+function updateExpenseTitle() {
+    const newName = expenseTitle.innerText.trim();
+
+     const expense = partitions[activePartitionIndex]
+                  .expenses[activeExpenseIndex];
 
     //update in memory
-    if(partitions[activePartitionIndex].expenses[expenseIndex].expenseName === newName) return false;
-    partitions[activePartitionIndex].expenses[expenseIndex].expenseName = newName;
+    if (expense.expenseName === newName) return false;
+    
+    expense.expenseName = newName;
 
     localStorage.setItem("partitions", JSON.stringify(partitions));
+
+    renderAllPartitions();   // update card title outside modal
     return true;
 }
 
