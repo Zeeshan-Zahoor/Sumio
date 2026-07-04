@@ -2,7 +2,7 @@
 
 **Sumio** is a personal expense tracking Progressive Web App (PWA) that I built to replace my own habit of tracking expenses manually in notes and spreadsheets.
 
-I wanted something **fast**, **offline-first**, and **visually clean**, without unnecessary complexity — so I built Sumio exactly the way I wanted to use it.
+I wanted something **fast**, **offline-first**, and **visually clean**, without unnecessary complexity, so I built Sumio exactly the way I wanted to use it.
 
 ---
 
